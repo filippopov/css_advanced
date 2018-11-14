@@ -1,0 +1,32 @@
+{
+  "name": "My_Page",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.html",
+  "dependencies": {
+    "gulp-install": "^1.1.0"
+  },
+  "devDependencies": {
+    "browser-sync": "",
+    "csso": "",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "",
+    "gulp-changed": "",
+    "gulp-csso": "",
+    "gulp-htmlmin": "",
+    "gulp-inline-source": "",
+    "gulp-load-plugins": "",
+    "gulp-notify": "",
+    "gulp-plumber": "",
+    "gulp-sass": "",
+    "gulp-size": "",
+    "gulp-sourcemaps": "",
+    "gulp-util": ""
+  },
+  "scripts": "",
+  "repository": "",
+  "author": "",
+  "license": "",
+  "bugs": "",
+  "homepage": ""
+}

@@ -1,0 +1,23 @@
+title: Philip Popov
+email: philip_popov@philip-popov.eu
+description: Philip Popov information page
+baseurl: "/my-page" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+github_username:  filippopov
+
+future: true
+markdown: kramdown
+plugins:
+  - jekyll-feed
+
+destination: docs
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - gulpfile.js
+  - docs
+  - node_modules
+  - scss
