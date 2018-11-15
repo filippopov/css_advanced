@@ -18,6 +18,7 @@
     list-style-type: none;
     padding: 1rem 0;
     border-bottom: 0.1px solid #888;
+    animation: navitemin 0.3s 1 ease forwards;
 }
 
 .navigation ul li:last-child {
@@ -38,6 +39,7 @@
 
 #nav-main-toggle:checked + .site-header .nav-toggle:before {
     content: '\f00d';
+    animation: jump 0.3s 1 ease-in-out forwards;
 }
 
 .navigation ul li a:before {
@@ -85,6 +87,3 @@
 .navigation ul li a:hover {
     color: #DF9D00;
 }
-
-
-

@@ -10,7 +10,10 @@
 </head>
 <body>
     {% include_relative /_layouts/header.html %}
-    {{content}}
+    <main>
+        {{content}}
+    </main>
+    {% include_relative /_layouts/footer.html %}
 </body>
 </html>
 
