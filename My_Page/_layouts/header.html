@@ -1,0 +1,23 @@
+<input type="checkbox" id="nav-main-toggle" name="nav-main-toggle">
+<header class="site-header">
+    <div class="wrapper">
+        <div class="site-branding">
+            <p class="site-title">
+                <a href="{{ site.baseurl }}/">{{ site.title }}</a>
+            </p>
+        </div>
+        <label id="nav-toggle" for="nav-main-toggle" class="fas nav-toggle left"></label>
+    </div>
+
+    <nav class="navigation main">
+        <ul>
+            <li><a class="{% if page.title == 'Home' %}active{% else %}no-active{% endif %}" href="{{ site.baseurl }}/">Home</a></li>
+            <li><a class="{% if page.title == 'About' %}active{% else %}no-active{% endif %}" href="{{ site.baseurl }}/about/">About</a></li>
+            <li><a class="{% if page.title == 'Skills' %}active{% else %}no-active{% endif %}" href="{{ site.baseurl }}/skills/">Skills</a></li>
+            <li><a class="{% if page.title == 'Experience' %}active{% else %}no-active{% endif %}" href="{{ site.baseurl }}/experience/">Experience</a></li>
+            <li><a class="{% if page.title == 'Education' %}active{% else %}no-active{% endif %}" href="{{ site.baseurl }}/education/">Education</a></li>
+            <li><a class="{% if page.title == 'Portfolio' %}active{% else %}no-active{% endif %}" href="{{ site.baseurl }}/portfolio/">Portfolio</a></li>
+            <li><a class="{% if page.title == 'Contact' %}active{% else %}no-active{% endif %}" href="{{ site.baseurl }}/contact/">Contact</a></li>
+        </ul>
+    </nav>
+</header>

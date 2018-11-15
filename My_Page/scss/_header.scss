@@ -1,0 +1,29 @@
+header.site-header div.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    color: #FFF;
+    background: #000;
+}
+
+div.wrapper .site-title a {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #FFF;
+    margin-left: 2rem;
+    font-weight: bold;
+}
+
+#nav-toggle {
+    font-size: 3rem;
+    margin-right: 2rem;
+    font-weight: bold;
+
+}
+
+#nav-toggle:before {
+    display: block;
+    content: '\f0c9';
+}
