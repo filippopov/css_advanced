@@ -4,86 +4,66 @@
 
 .navigation {
     display: none;
+
+    ul {
+        padding: 1rem 1.5rem 2rem 1.5rem;
+        margin: 0;
+        background: #000;
+        width: 100vw;
+        color: #FFF;
+
+        li {
+            list-style-type: none;
+            padding: 1rem 0;
+            border-bottom: 0.1px solid #888;
+            animation: navitemin 0.3s 1 ease forwards;
+
+            a {
+                text-decoration: none;
+                color: #FFF;
+                font-size: 1rem;
+                text-transform: uppercase;
+
+                &:before {
+                    color: #FFF;
+                    font-family: 'Font Awesome 5 Free';
+                    font-weight: bold;
+                    display: inline-block;
+                    margin-right: 1rem;
+                }
+
+                &.active,
+                &.active:before {
+                    color: #DF9D00;
+                }
+
+                &:hover:before,
+                &:hover {
+                    color: #DF9D00;
+                }
+            }
+        }
+
+        li:last-child {
+            border-bottom: none;
+            padding-bottom: 1rem;
+        }
+    }
 }
 
-.navigation ul {
-    padding: 1rem 1.5rem 2rem 1.5rem;
-    margin: 0;
-    background: #000;
-    width: 100vw;
-    color: #FFF;
+#nav-main-toggle:checked + .site-header{
+    .navigation {
+        display: flex;
+    }
+
+    .nav-toggle:before {
+        content: '\f00d';
+        animation: jump 0.3s 1 ease-in-out forwards;
+    }
 }
 
-.navigation ul li {
-    list-style-type: none;
-    padding: 1rem 0;
-    border-bottom: 0.1px solid #888;
-    animation: navitemin 0.3s 1 ease forwards;
-}
+$icons: (1: '\f6f1', 2: '\f129', 3: '\f012', 4: '\f080', 5: '\f19d', 6: '\f542', 7: '\f573');
 
-.navigation ul li:last-child {
-    border-bottom: none;
-    padding-bottom: 1rem;
-}
-
-.navigation ul li a {
-    text-decoration: none;
-    color: #FFF;
-    font-size: 1rem;
-    text-transform: uppercase;
-}
-
-#nav-main-toggle:checked + .site-header .navigation {
-    display: flex;
-}
-
-#nav-main-toggle:checked + .site-header .nav-toggle:before {
-    content: '\f00d';
-    animation: jump 0.3s 1 ease-in-out forwards;
-}
-
-.navigation ul li a:before {
-    color: #FFF;
-    font-family: 'Font Awesome 5 Free';
-    font-weight: bold;
-    display: inline-block;
-    margin-right: 1rem;
-}
-
-.navigation ul li:nth-child(1) a:before {
-    content: '\f6f1';
-}
-
-.navigation ul li:nth-child(2) a:before {
-    content: '\f129';
-}
-
-.navigation ul li:nth-child(3) a:before {
-    content: '\f012';
-}
-
-.navigation ul li:nth-child(4) a:before {
-    content: '\f080';
-}
-
-.navigation ul li:nth-child(5) a:before {
-    content: '\f19d';
-}
-
-.navigation ul li:nth-child(6) a:before {
-    content: '\f542';
-}
-
-.navigation ul li:nth-child(7) a:before {
-    content: '\f573';
-}
-
-.navigation ul li a.active,
-.navigation ul li a.active:before {
-    color: #DF9D00;
-}
-
-.navigation ul li a:hover:before,
-.navigation ul li a:hover {
-    color: #DF9D00;
+@each $child, $icon in $icons {
+    .navigation ul li:nth-child(#{$child}) a:before { content: $icon; }
 }

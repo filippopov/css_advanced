@@ -1,4 +1,4 @@
-body > footer:last-of-type {
+footer {
     margin-top: auto;
     background: #000;
     color: #FFF;
@@ -6,19 +6,25 @@ body > footer:last-of-type {
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    div {
+        animation: navitemin 0.3s 1 ease forwards;
+    }
+
+    .social {
+        a {
+            margin-right: 0.7rem;
+            font-size: 1.5rem;
+            color: white;
+
+            &:hover {
+                color: #DF9D00;
+            }
+        }
+    }
 }
 
-body > footer:last-of-type > div {
-    animation: navtoggleshake 0.5s 1 ease-in-out forwards;
-}
 
-body > footer:last-of-type .social a {
-    margin-right: 0.7rem;
-    font-size: 1.5rem;
-    color: white;
 
-}
 
-body > footer:last-of-type .social a:hover {
-    color: #DF9D00;
-}
+

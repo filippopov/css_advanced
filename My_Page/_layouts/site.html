@@ -6,9 +6,8 @@
     <title>{{ site.title }}</title>
     <script src="{{ site.baseurl }}/js/jquery.min.js"></script>
     <link rel="stylesheet" href="{{ site.baseurl }}/css/styles.css" type="text/css" />
-
 </head>
-<body>
+<body class="{{page.title | slugify}}">
     {% include_relative /_layouts/header.html %}
     <main>
         {{content}}
@@ -16,9 +15,3 @@
     {% include_relative /_layouts/footer.html %}
 </body>
 </html>
-
-<script>
-    $(function(){
-        console.log('hi');
-    })
-</script>
