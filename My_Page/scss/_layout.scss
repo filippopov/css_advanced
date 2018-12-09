@@ -5,7 +5,7 @@ body {
     overflow: hidden;
 }
 
-@media screen and (min-width: 700px) {
+@include mq('tablet-wide') {
     body {
         flex-direction: row;
         justify-content: space-between;
@@ -21,7 +21,7 @@ body {
     }
 
     header.site-header {
-        width: 30%;
+        width: 20rem;
     }
 
     #nav-toggle {
@@ -69,12 +69,16 @@ body {
     }
 
     footer.site-footer {
-        width: 13%;
+        width: 11rem;
 
         .social {
             display: flex;
             justify-content: space-around;
             padding: 1rem;
+        }
+
+        .author {
+            font-size: 0.75rem;
         }
     }
 }
