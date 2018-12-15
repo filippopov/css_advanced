@@ -1,12 +1,12 @@
 body {
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    overflow: hidden;
 }
 
 @include mq('tablet-wide') {
     body {
+        height: 100vh;
+        overflow: hidden;
         flex-direction: row;
         justify-content: space-between;
 

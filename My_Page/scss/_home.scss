@@ -1,0 +1,44 @@
+main {
+    background: #F7F7F7;
+    width: 100%;
+    padding: 2rem;
+
+    @include mq('tablet-wide', max) {
+        height: 90vh;
+    }
+
+    section {
+        width: 70%;
+        margin: 0 auto;
+        font-size: 1.3rem;
+        h2 {
+            font-weight: normal;
+
+            &:after {
+                content: '';
+                display: block;
+                border: 0.1rem solid #FFCC00;
+                width: 10%;
+                background: #FFCC00;
+            }
+        }
+
+        .my-information {
+            div {
+                font-size: 1.2rem;
+                padding: 0.5rem 0;
+                &:after {
+                    margin-top: 0.5rem;
+                    content: '';
+                    display: block;
+                    border: 0.1rem solid #CCC;
+                    background: #CCC;
+                }
+            }
+
+            span {
+                font-weight: bold;
+            }
+        }
+    }
+}
