@@ -10,4 +10,44 @@ permalink: /certificates/
             Certificates
         </h2>
     </header>
+    <ul class="gallery">
+        <li><a href="#"><img src="{{ site.baseurl }}/images/Diploma%20-%20Diploma.jpeg"></a></li>
+        <li><a href="#"><img src="{{ site.baseurl }}/images/PHP%20Fundamentals%20-%20January%202017%20-%20Certificate.jpeg"></a></li>
+        <li><a href="#"><img src="{{ site.baseurl }}/images/PHP%20Web%20Development%20-%20October%202016%20-%20Certificate.jpeg"></a></li>
+        <li><a href="#"><img src="{{ site.baseurl }}/images/JS%20Fundamentals%20-%20May%202018%20-%20Certificate.jpeg"></a></li>
+        <li><a href="#"><img src="{{ site.baseurl }}/images/JS%20Advanced%20-%20June%202018%20-%20Certificate.jpeg"></a></li>
+        <li><a href="#"><img src="{{ site.baseurl }}/images/JS%20Applications%20-%20July%202018%20-%20Certificate.jpeg"></a></li>
+        <li><a href="#"><img src="{{ site.baseurl }}/images/JS%20Frameworks%20with%20AngularJS%20-%20May%202015%20-%20Certificate.jpeg"></a></li>
+        <li><a href="#"><img src="{{ site.baseurl }}/images/Web%20Fundamentals%20-%20HTML5%20-%20September%202018%20-%20Certificate.jpeg"></a></li>
+        <li><a href="#"><img src="{{ site.baseurl }}/images/Drupal%20Site%20Building%20-%20September%202015%20-%20Certificate.jpeg"></a></li>
+        <li><a href="#"><img src="{{ site.baseurl }}/images/Advanced%20C%23%20-%20February%202016%20-%20Certificate.jpeg"></a></li>
+        <li><a href="#"><img src="{{ site.baseurl }}/images/SoftUniada%20-%20January%202016%20-%20Certificate.jpeg"></a></li>
+        <li><a href="#"><img src="{{ site.baseurl }}/images/Teamwork%20and%20Personal%20Skills%20-%20Sep%202014%20-%20Certificate.jpeg"></a></li>
+    </ul>
 </section>
+
+<div id="dialog-form" title="Certificates">
+
+</div>
+
+<script>
+    $(function () {
+        dialog = $( "#dialog-form" ).dialog({
+            autoOpen: false,
+            height: 850,
+            width: 850,
+            buttons: {
+                Cancel: function() {
+                    dialog.dialog('close');
+                }
+            }
+        });
+
+        $('.gallery li').on( "click", function() {
+            dialog.dialog( "open" );
+            $('#dialog-form').empty();
+            let imageSrc = $(this).children().children().attr('src');
+            $('#dialog-form').append($('<img>').attr('src', imageSrc));
+        });
+    });
+</script>

@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" />
     <title>Philip Popov</title>
-    <script src="/my-page/js/jquery.min.js"></script>
-    <link rel="stylesheet" href="/my-page/css/styles.css" type="text/css" />
-    <link rel="shortcut icon" href="/my-page/images/favicon.ico">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="/css/styles.css" type="text/css" />
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/js/jquery-ui-1.12.1.custom/jquery-ui.min.css">
 </head>
 <body class="certificates">
     <input type="checkbox" id="nav-main-toggle" name="nav-main-toggle">
@@ -14,7 +16,7 @@
     <div class="wrapper">
         <div class="site-branding">
             <p class="site-title">
-                <a href="/my-page/">Philip Popov</a>
+                <a href="/">Philip Popov</a>
             </p>
         </div>
         <label id="nav-toggle" for="nav-main-toggle" class="fas nav-toggle left"></label>
@@ -22,14 +24,14 @@
 
     <nav class="navigation main">
         <ul>
-            <li><a class="no-active" href="/my-page/">Home</a></li>
-            <li><a class="no-active" href="/my-page/about/">About</a></li>
-            <li><a class="no-active" href="/my-page/skills/">Skills</a></li>
-            <li><a class="no-active" href="/my-page/experience/">Experience</a></li>
-            <li><a class="no-active" href="/my-page/education/">Education</a></li>
-            <li><a class="no-active" href="/my-page/portfolio/">Portfolio</a></li>
-            <li><a class="active" href="/my-page/certificates/">Certificates</a></li>
-            <li><a class="no-active" href="/my-page/contact/">Contact</a></li>
+            <li><a class="no-active" href="/">Home</a></li>
+            <li><a class="no-active" href="/about/">About</a></li>
+            <li><a class="no-active" href="/skills/">Skills</a></li>
+            <li><a class="no-active" href="/experience/">Experience</a></li>
+            <li><a class="no-active" href="/education/">Education</a></li>
+            <li><a class="no-active" href="/portfolio/">Portfolio</a></li>
+            <li><a class="active" href="/certificates/">Certificates</a></li>
+            <li><a class="no-active" href="/contact/">Contact</a></li>
         </ul>
     </nav>
 </header>
@@ -40,7 +42,47 @@
             Certificates
         </h2>
     </header>
+    <ul class="gallery">
+        <li><a href="#"><img src="/images/Diploma%20-%20Diploma.jpeg"></a></li>
+        <li><a href="#"><img src="/images/PHP%20Fundamentals%20-%20January%202017%20-%20Certificate.jpeg"></a></li>
+        <li><a href="#"><img src="/images/PHP%20Web%20Development%20-%20October%202016%20-%20Certificate.jpeg"></a></li>
+        <li><a href="#"><img src="/images/JS%20Fundamentals%20-%20May%202018%20-%20Certificate.jpeg"></a></li>
+        <li><a href="#"><img src="/images/JS%20Advanced%20-%20June%202018%20-%20Certificate.jpeg"></a></li>
+        <li><a href="#"><img src="/images/JS%20Applications%20-%20July%202018%20-%20Certificate.jpeg"></a></li>
+        <li><a href="#"><img src="/images/JS%20Frameworks%20with%20AngularJS%20-%20May%202015%20-%20Certificate.jpeg"></a></li>
+        <li><a href="#"><img src="/images/Web%20Fundamentals%20-%20HTML5%20-%20September%202018%20-%20Certificate.jpeg"></a></li>
+        <li><a href="#"><img src="/images/Drupal%20Site%20Building%20-%20September%202015%20-%20Certificate.jpeg"></a></li>
+        <li><a href="#"><img src="/images/Advanced%20C%23%20-%20February%202016%20-%20Certificate.jpeg"></a></li>
+        <li><a href="#"><img src="/images/SoftUniada%20-%20January%202016%20-%20Certificate.jpeg"></a></li>
+        <li><a href="#"><img src="/images/Teamwork%20and%20Personal%20Skills%20-%20Sep%202014%20-%20Certificate.jpeg"></a></li>
+    </ul>
 </section>
+
+<div id="dialog-form" title="Certificates">
+
+</div>
+
+<script>
+    $(function () {
+        dialog = $( "#dialog-form" ).dialog({
+            autoOpen: false,
+            height: 850,
+            width: 850,
+            buttons: {
+                Cancel: function() {
+                    dialog.dialog('close');
+                }
+            }
+        });
+
+        $('.gallery li').on( "click", function() {
+            dialog.dialog( "open" );
+            $('#dialog-form').empty();
+            let imageSrc = $(this).children().children().attr('src');
+            $('#dialog-form').append($('<img>').attr('src', imageSrc));
+        });
+    });
+</script>
     </main>
     <footer class="site-footer">
     <div class="social">
