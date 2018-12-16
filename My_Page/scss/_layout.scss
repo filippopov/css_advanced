@@ -5,13 +5,11 @@ body {
 
 @include mq('tablet-wide') {
     body {
-        height: 100vh;
-        overflow: hidden;
         flex-direction: row;
         justify-content: space-between;
 
         footer:last-of-type {
-            height: 100vh;
+            margin-top: 0;
             flex-direction: column;
 
             .author{
