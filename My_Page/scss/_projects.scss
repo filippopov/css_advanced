@@ -1,0 +1,27 @@
+.project-information {
+    & > div {
+        padding: 1rem 0;
+        &:after {
+            content: '';
+            display: block;
+            border: 0.1rem solid #CCC;
+            background: #CCC;
+            margin-top: 0.5rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: #DF9D00;
+
+            &:hover {
+                color: black;
+            }
+        }
+
+        span {
+            font-weight: bold;
+        }
+
+    }
+}
+
