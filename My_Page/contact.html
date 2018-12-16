@@ -3,3 +3,53 @@ layout: site
 title: Contact
 permalink: /contact/
 ---
+
+
+<section>
+    <header>
+        <h2>
+            Contact
+        </h2>
+    </header>
+    <form action="" method="post">
+        <fieldset>
+            <legend>DROP ME A LINE</legend>
+
+            <p class="field">
+                <span class="input">
+                    <input type="text" name="your-name" placeholder="Your Name">
+                    <span class="actions"></span>
+                    <i class="fas fa-user"></i>
+                </span>
+            </p>
+
+            <p class="field">
+                <span class="input">
+                    <input type="text" name="your-email"  placeholder="Your Email">
+                    <span class="actions"></span>
+                    <i class="fas fa-envelope"></i>
+                </span>
+            </p>
+
+            <p class="field">
+                <span class="input">
+                    <textarea name="" cols="30" rows="10" placeholder="Your Message..."></textarea>
+                    <span class="actions"></span>
+                </span>
+            </p>
+
+            <input type="submit" value="SAY HELLO!">
+        </fieldset>
+    </form>
+</section>
+
+
+<script>
+    $(function () {
+        $('form').submit(function(e){
+            e.preventDefault();
+            $('input[type="text"]').val('');
+            $('textarea').val('');
+        });
+    })
+</script>

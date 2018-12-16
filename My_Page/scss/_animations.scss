@@ -35,3 +35,25 @@
         transform: translateX(0);
     }
 }
+
+@keyframes shake {
+    0% {
+        transform: translate(-2rem,0);
+    }
+
+    25% {
+        transform: translate(2rem, 0);
+    }
+
+    50% {
+        transform: translate(-2rem, 0);
+    }
+
+    75% {
+        transform: translate(2rem, 0);
+    }
+
+    100% {
+        transform: translate(0,0);
+    }
+}

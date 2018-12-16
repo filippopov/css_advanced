@@ -1,0 +1,97 @@
+fieldset,
+fieldset legend {
+    border: 2px solid #CCC;
+    box-shadow: 0 0 2rem 0 rgba(black, 0.1);
+}
+
+fieldset {
+    background: #F7F7F7;
+    padding: 3.5vh 4.5vw 3vh 4.5vw;
+}
+
+fieldset legend {
+    display: inline-block;
+    background: #F7F7F7;
+    padding: 0.6em 2.2em;
+    font-weight: bold;
+}
+
+input[type="submit"] {
+    display: block;
+    border: 2px solid #DF9D00;
+    background: #FFF;
+    color: #000;
+    padding: 0.8em 2em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background: #DF9D00;
+    color: #FFF;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+form {
+    animation: shake 0.5s 1 ease-in-out forwards;
+}
+
+.field {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.field > label {
+    flex: 0 0 6rem;
+    text-align: right;
+    padding-right: 0.5rem;
+}
+
+.input, textarea {
+    flex: 1 0 auto;
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.input input, textarea {
+    order: 1;
+    border: none;
+    padding: 0.5rem 0.6rem;
+    position: relative;
+    z-index: 3;
+    background: none;
+    outline: none;
+    flex: 1 0 auto;
+}
+
+.input .fas {
+    order: 0;
+    position: relative;
+    z-index: 2;
+    line-height: 1;
+    padding: 0.2rem 0.5rem 0.2rem 0.7rem;
+    font-size: 0.8rem;
+}
+
+.input .actions {
+    background: #FFF;
+    border: 1px solid #CCC;
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 1;
+}
+
+.input textarea:focus + .actions,
+.input input:focus + .actions {
+    border-color: #DF9D00;
+}
+
+.input input:focus + .actions + .fas {
+    color: #DF9D00;
+}
+
+textarea {
+    resize: none;
+}
