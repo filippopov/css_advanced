@@ -4,7 +4,7 @@ main {
     padding: 2rem;
 
     @include mq('tablet-wide', max) {
-        height: 90vh;
+        height: 92vh;
     }
 
     section {

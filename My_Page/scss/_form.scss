@@ -16,6 +16,10 @@ fieldset legend {
     font-weight: bold;
 }
 
+form {
+    animation: shake 0.5s 1 ease-in-out forwards;
+}
+
 input[type="submit"] {
     display: block;
     border: 2px solid #DF9D00;
@@ -24,28 +28,19 @@ input[type="submit"] {
     padding: 0.8em 2em;
     font-weight: bold;
     cursor: pointer;
-}
+    outline: none;
 
-input[type="submit"]:hover {
-    background: #DF9D00;
-    color: #FFF;
-    transition: background 0.3s ease, border-color 0.3s ease;
-}
-
-form {
-    animation: shake 0.5s 1 ease-in-out forwards;
+    &:hover {
+        background: #DF9D00;
+        color: #FFF;
+        transition: background 0.3s ease, border-color 0.3s ease;
+    }
 }
 
 .field {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-}
-
-.field > label {
-    flex: 0 0 6rem;
-    text-align: right;
-    padding-right: 0.5rem;
 }
 
 .input, textarea {
