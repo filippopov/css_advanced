@@ -1,0 +1,35 @@
+.my-experience {
+    & > div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 0;
+
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        &:after {
+            content: '';
+            display: block;
+            border: 0.1rem solid #CCC;
+            background: #CCC;
+            margin-top: 0.5rem;
+            width: 100%;
+        }
+
+        div:nth-child(1) {
+            width: 35%;
+            color: #DF9D00;
+        }
+
+        div:nth-child(2) {
+            width: 65%;
+            p:nth-child(1) {
+                color: #DF9D00;;
+            }
+        }
+    }
+}
