@@ -33,27 +33,6 @@ ul.gallery {
             content: '';
             padding-top: 150%;
         }
-
-        &.span-c2 {
-            grid-column: span 2;
-            grid-row: span 2;
-        }
-
-        &.span-r2 {
-            grid-row: span 2;
-        }
-
-        &.span-c3 {
-            grid-column: span 3;
-        }
-
-        &.span-c31 {
-            grid-column: span 3;
-            &:before {
-                padding-top:33.33%;
-
-            }
-        }
     }
 
     a {
@@ -70,10 +49,5 @@ ul.gallery {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-    }
-
-    li.img-p img {
-        width: 150%;
-        height: auto;
     }
 }

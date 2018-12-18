@@ -62,7 +62,7 @@
     }
 }
 
-$icons: (1: '\f6f1', 2: '\f129', 3: '\f012', 4: '\f080', 5: '\f19d', 6: '\f542', 7: '\f70e', 8: '\f573');
+$icons: (1: '\f6f1', 2: '\f542', 3: '\f012', 4: '\f19d', 5: '\f70e', 6: '\f573', 7: '\f70e', 8: '\f573');
 
 @each $child, $icon in $icons {
     .navigation ul li:nth-child(#{$child}) a:before { content: $icon; }
